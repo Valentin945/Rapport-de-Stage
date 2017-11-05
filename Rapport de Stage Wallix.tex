@@ -1,0 +1,51 @@
+\documentclass[a4paper]{report}
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{layout}
+\usepackage{fullpage}
+\usepackage{eso-pic}
+\usepackage{graphicx}
+
+\newcommand\AtUpperLeftCorner[3]{%
+\put(\LenToUnit{#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{#3}}%
+}
+\newcommand\AtUpperRightCorner[3]{%
+\put(\LenToUnit{\dimexpr\paperwidth-#1},\LenToUnit{\dimexpr\paperheight-#2}){\blap{\llap{#3}}}%
+}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
+
+\title{\huge{\bf{Conception et Développement de composants graphiques avancés.}}}
+\author{\huge{\bf{LAMBERT Valentin}}\\ \Large{2 année d'ingénieur\\Septembre 2017 - Janvier 2018}}
+\makeatletter
+
+
+
+\begin{document}
+  \begin{titlepage}
+    \AddToShipoutPicture{
+       \AtUpperLeftCorner{1.5cm}{1cm}{\includegraphics[width=4cm]{logo/EpitaLogo.png}}
+       \AtUpperRightCorner{1.5cm}{1cm}{\includegraphics[width=6.5cm]{logo/logoWallix.png}}
+    }
+    \begin{center}
+	\vspace*{10cm}
+	\textsc{\@title}
+	\HRule
+	\vspace*{0.5cm}
+	\large{\@author} 
+    \end{center}
+    \vspace*{5.2cm}
+    \begin{flushright}
+    \begin{large}
+       \textsc{Maître de Stage}: \begin{bf}{Mr HERRERA PONTE Aron} \end{bf}
+      
+       \vspace*{0.5cm}
+       Lieux: \bf{250 Bis Rue du Faubourg Saint Honoré 75008 PARIS}
+    \end{large}
+    \end{flushright}
+
+  \end{titlepage}
+  \ClearShipoutPicture
+\end{document}
